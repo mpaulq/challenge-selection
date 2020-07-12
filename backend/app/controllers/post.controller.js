@@ -28,7 +28,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   Post.findAll({})
     .then(data => {
-        res.send(data);
+        res.send({data});
     })
     .catch(err => {
         res.status(500).send({
