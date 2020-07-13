@@ -44,6 +44,7 @@ exports.delete = (req, res) => {
     .then(data => {
         if(data == 1) {
             res.send({
+                deleted: id,
                 message: "Post eliminado con exitosamente"
             });
         } else {
